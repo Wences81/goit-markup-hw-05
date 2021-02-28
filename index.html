@@ -52,9 +52,23 @@
     <section class="hero">
 
       <h1 class="hero-title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ<br> ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-      <button type="button" class="button">Заказать услугу</button>
+      <button data-modal-open type="button" class="button">Заказать услугу</button>
 
     </section>
+
+
+<div data-modal class="backdrop is-hidden">
+  <div class="modal">
+    <div data-modal-close class="box-close">
+    <svg class="button-close" width="11px" height="11px">
+      <use href="./images/sprite.svg#icon-Vector"> </use>
+    </svg> 
+    </div>
+  </div>
+
+</div>
+
+
 
 <!-- Advantages -->
 
@@ -125,12 +139,19 @@
       <ul class="work-list">
         <li class="item">
           <img class="img" src="./images/box1(1).jpg" alt="руки набирают текст" width="370">
+          
+          <p class="overlay">десктопные приложения</p>
+          
         </li>
         <li class="item">
           <img class="img" src="./images/box2(1).jpg" alt="в левой руке телефон" width="370" height="294">
+
+          <p class="overlay">мобильные приложения</p>
         </li>
         <li class="item">
           <img class="img" src="./images/box3(1).jpg" alt="рука держит планшет" width="370" height="294">
+
+          <p class="overlay">дизайнерские РЕШЕНИЯ</p>
         </li>
       </ul>
       </div>
@@ -420,7 +441,10 @@
     </div>
 
   </footer>
-  
+
+
+
+  <script src="./js/modal.js"></script>
   
 </body>
 </html>
