@@ -21,6 +21,8 @@
 
   --icon-color: rgba(175, 177, 184, 1);
 
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 
 }
 
@@ -163,6 +165,8 @@ nav .link {
 .site-nav .link:hover, 
 .site-nav .link:focus {
   color: var(--blue-text);
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .site-nav .link:hover::after {
@@ -198,6 +202,8 @@ nav .link {
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--blue-text);
+
+  transition: transform 250ms var(--timing-function);
 }
 
 
@@ -304,6 +310,8 @@ nav .link {
   background-color: var(--blue-text);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+
+  transition: transform 250ms var(--timing-function);
 }
 
 /* Advantages */
@@ -540,6 +548,8 @@ nav .link {
 .social-link:focus {
   background-color: var(--blue-text);
   color: var(--white-text);
+
+  transition: transform 250ms var(--timing-function);
   
 }
 
@@ -616,6 +626,10 @@ nav .link {
 
 .item-card:hover .hover-box {
   transform: translateY(0);
+
+  
+  transition: transform 250ms var(--timing-function);
+
 }
 
 .card-tumb {
@@ -685,7 +699,7 @@ h2 .text-cards {
 
 .clients {
 
-  padding: 94px;
+  padding: 94px 0px;
 
 }
 
@@ -738,6 +752,8 @@ h2 .text-cards {
   
   border: 1px solid var(--blue-text);
   color: var(--blue-text); 
+
+  transition: transform 250ms var(--timing-function);
   
 }
 
@@ -920,6 +936,7 @@ h2 .text-cards {
 .footer-link:hover,
 .footer-link:focus {
   background-color: var(--blue-text);
+  transition: transform 250ms var(--timing-function);
 }
 
 .footer-icons {
@@ -941,22 +958,38 @@ h2 .text-cards {
 /* MODAL  */
 
 .backdrop {
-  position: absolute;
-  min-width: 1600px;
-  min-height: 1024px;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
   left: 0px;
   top: 0px;
 
   background: rgba(0, 0, 0, 0.2);
 
+  opacity: 1;
+  
+  transition: opacity 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: visible;
+
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
 }
 
 .modal {
   position: absolute;
   width: 528px;
   height: 581px;
-  left: 536px;
-  top: 221px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--timing-function);
 
   background-color: var(--white-text);
 
@@ -965,11 +998,6 @@ h2 .text-cards {
 
 }
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-
-}
 
 .box-close {
   display: flex;
