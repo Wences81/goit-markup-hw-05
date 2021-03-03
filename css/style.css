@@ -159,17 +159,19 @@ nav .link {
 
   position: relative;
 
-  transition: opacity 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 
 }
 
 
 .site-nav .link:hover, 
 .site-nav .link:focus {
+
   color: var(--blue-text);
 
   
 }
+
 
 .current::after {
   content: "";
@@ -212,7 +214,7 @@ nav .link {
   display: flex;
   align-items: center;
 
-  transition: transform 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 
 }
 
@@ -319,7 +321,7 @@ nav .link {
   padding: 6px 22px;
   border: none;
 
-  transition: transform 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 
 }
 
@@ -561,7 +563,7 @@ nav .link {
   background-color: var(--white-text);
   fill: var(--white-text);
   
-  transition: transform 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .social-link:hover,
@@ -764,7 +766,7 @@ h2 .text-cards {
   justify-content: center;
   align-items: center;
 
-  transition: transform 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 
 .clients-link:hover,
@@ -851,6 +853,10 @@ h2 .text-cards {
   
 }
 
+.futer-list .link {
+  transition: color 250ms var(--timing-function);
+}
+
 
 .futer-span {
   color: var(--white-text); 
@@ -884,7 +890,7 @@ h2 .text-cards {
 
   text-decoration: none;
 
-  transition: transform 250ms var(--timing-function);
+ 
 }
 
 .futer-nav .link:hover,
@@ -953,7 +959,7 @@ h2 .text-cards {
   margin-right: 10px;
   background-color: rgba(255, 255, 255, 0.1);
 
-  transition: transform 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 
 }
 
